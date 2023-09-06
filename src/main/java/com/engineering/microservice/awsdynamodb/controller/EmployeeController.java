@@ -1,13 +1,16 @@
+
 package com.engineering.microservice.awsdynamodb.controller;
 
 
 import com.engineering.microservice.awsdynamodb.domain.Employee;
 import com.engineering.microservice.awsdynamodb.exception.DataNotFoundException;
 import com.engineering.microservice.awsdynamodb.service.EmployeeService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@ApiOperation("Add Gems to Employee")
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
@@ -19,13 +22,13 @@ public class EmployeeController {
     }
 
 
-    @GetMapping()
+    @GetMapping
     public List<Employee> all() {
         return employeeService.getAll();
 
     }
 
-    @PostMapping()
+    @PostMapping
     public Employee save(@RequestBody Employee employee) {
         return employeeService.create(employee);
     }
