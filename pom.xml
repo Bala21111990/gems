@@ -10,11 +10,11 @@
     </parent>
     <groupId>com.engineering.microservice</groupId>
     <artifactId>employee-gems</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>aws-dynamodb</name>
     <description>Demo project for Spring Boot and AWS Dynamo DB</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <aws.java.sdk.dynamodb.version>1.12.85</aws.java.sdk.dynamodb.version>
     </properties>
     <dependencies>
