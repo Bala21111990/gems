@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.engineering.microservice</groupId>
     <artifactId>aws-dynamodb</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>aws-dynamodb</name>
     <description>Demo project for Spring Boot and AWS Dynamo DB</description>
     <properties>
