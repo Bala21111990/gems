@@ -61,7 +61,7 @@
     </dependencies>
 
     <build>
-        <finalName>aws-sample</finalName>
+        <finalName>employee-gems</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
