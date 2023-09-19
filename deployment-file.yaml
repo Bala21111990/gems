@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: employee-gems
+  name: employee-gems
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: employee-gems
+  template:
+    metadata:
+      labels:
+        app: employee-gems
+    spec:
+      containers:
+        - name: poc-employee-gems
+          image: 761336676871.dkr.ecr.eu-west-2.amazonaws.com/employee-gems:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8081
+              name: http
+              protocol: TCP
+#Load balancer Details
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: employee-gems
+    k8s-app: employee-gems
+  name: employee-gems
+spec:
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 8081
+  type: LoadBalancer
+  selector:
+    app: employee-gems
