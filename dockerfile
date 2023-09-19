@@ -1,3 +1,3 @@
 FROM openjdk:11
-ADD target/aws-sample.jar aws-sample.jar
-ENTRYPOINT ["java","-jar","aws-sample.jar"]
+ADD target/employee-gems.jar employee-gems.jar
+ENTRYPOINT ["java","-jar","employee-gems.jar"]
